@@ -1,0 +1,14 @@
+int32 L_Front
+int32 R_Front
+int32 L_Back
+int32 R_Back
+uint32 roller_spd_1
+uint32 roller_spd_2
+int32 x_penembak
+int32 y_penembak
+int32 lift_gripper
+int32 enc_A_penembak
+int32 enc_B_penembak
+float32 sudut
+float32 lin_vel
+float32 ang_vel

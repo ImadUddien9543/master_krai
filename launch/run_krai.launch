@@ -1,0 +1,25 @@
+<launch>
+  <!--<node name="ds4drv_run" pkg="master_krai" type="run_ds4drv.sh" output="screen">
+    </node>-->
+
+  <include file="$(find joy)/launch/ps4joy.launch">
+    </include>
+
+  <node name="Command_robot" pkg="master_krai" type="Command_robot.py" output="screen">
+    </node>
+
+  <node name="Run_Gajah" pkg="master_krai" type="Run_Gajah.py" output="screen">
+    </node>
+  
+  <node name="serial_node" pkg="rosserial_python" type="serial_node.py" output="screen">
+    <param name="port" value="/dev/ttyACM0"/>
+    <param name="baud" value="2000000"/>
+    <param name="respawn" value="true"/>
+    </node>
+
+  <!--<node name="serial_node2" pkg="rosserial_python" type="serial_node.py" output="screen">
+    <param name="port" value="/dev/ttyACM0"/>    
+    <param name="respawn" value="true"/>
+    </node>-->
+
+</launch>
